@@ -84,17 +84,17 @@ Suppose you start with this::
     class Node(models.Model):
         ...
     
-    mptt.register(Node, order_insertion_by=['name'], parent_attr='padre')
+    mptt2.register(Node, order_insertion_by=['name'], parent_attr='padre')
 
 
 First, Make your model a subclass of ``MPTTModel``, instead of ``models.Model``::
 
-    from mptt.models import MPTTModel
+    from mptt2.models import MPTTModel
     
     class Node(MPTTModel):
         ...
 
-Then remove your call to ``mptt.register()``. If you were passing it keyword arguments, you should add them to an ``MPTTMeta`` inner class on the model::
+Then remove your call to ``mptt2.register()``. If you were passing it keyword arguments, you should add them to an ``MPTTMeta`` inner class on the model::
 
     class Node(MPTTModel):
         ...
@@ -102,11 +102,11 @@ Then remove your call to ``mptt.register()``. If you were passing it keyword arg
             order_insertion_by = ['name']
             parent_attr = 'padre'
 
-If necessary you can still use ``mptt.register``. It was removed in 0.4.0 but restored in 0.4.2, since people reported use cases that didn't work without it.)
+If necessary you can still use ``mptt2.register``. It was removed in 0.4.0 but restored in 0.4.2, since people reported use cases that didn't work without it.)
 
-For instance, if you need to register models where the code isn't under your control, you'll need to use ``mptt.register()``.
+For instance, if you need to register models where the code isn't under your control, you'll need to use ``mptt2.register()``.
 
-Behind the scenes, ``mptt.register()`` in 0.4 will actually add MPTTModel to ``Node.__bases__``,
+Behind the scenes, ``mptt2.register()`` in 0.4 will actually add MPTTModel to ``Node.__bases__``,
 thus achieving the same result as subclassing ``MPTTModel``.
 If you're already inheriting from something other than ``Model``, that means multiple inheritance.
 
@@ -145,4 +145,4 @@ Compatibility with 0.3
 ----------------------
 
 ``MPTTModel`` was added in 0.4. If you're writing a library or reusable app that needs to work with 0.3,
-you should use the ``mptt.register()`` function instead, as above.
+you should use the ``mptt2.register()`` function instead, as above.

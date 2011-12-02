@@ -1,7 +1,7 @@
 from django.db import models
 
-from mptt.models import MPTTModel
-from mptt.managers import TreeManager
+from mptt2.models import MPTTModel
+from mptt2.managers import TreeManager
 
 
 class CustomTreeManager(TreeManager):

@@ -11,7 +11,7 @@ Getting started
 
 Before you can use these tags/filters, you must:
 
- * add "mptt" to your ``INSTALLED_APPS`` in ``settings.py``
+ * add "mptt2" to your ``INSTALLED_APPS`` in ``settings.py``
  * add ``{% load mptt_tags %}`` in your template.
 
 Recursive tags

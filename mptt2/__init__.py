@@ -9,15 +9,15 @@ def register(*args, **kwargs):
     Registers a model class as an MPTTModel, adding MPTT fields and adding MPTTModel to __bases__.
     This is equivalent to just subclassing MPTTModel, but works for an already-created model.
     """
-    from mptt.models import MPTTModelBase
+    from mptt2.models import MPTTModelBase
     return MPTTModelBase.register(*args, **kwargs)
 
 
 # Also removed in 0.4.0 but restored in 0.4.2, otherwise this 0.3-compatibility code will break:
-#     if hasattr(mptt, 'register'):
+#     if hasattr(mptt2, 'register'):
 #         try:
-#             mptt.register(...)
-#         except mptt.AlreadyRegistered:
+#             mptt2.register(...)
+#         except mptt2.AlreadyRegistered:
 #             pass
 
 class AlreadyRegistered(Exception):

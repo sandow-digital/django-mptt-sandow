@@ -6,9 +6,9 @@ from django.db.models.base import ModelBase
 from django.db.models.query import Q
 from django.utils.translation import ugettext as _
 
-from mptt.fields import TreeForeignKey, TreeOneToOneField, TreeManyToManyField
-from mptt.managers import TreeManager
-from mptt.utils import _exists
+from mptt2.fields import TreeForeignKey, TreeOneToOneField, TreeManyToManyField
+from mptt2.managers import TreeManager
+from mptt2.utils import _exists
 
 
 class MPTTOptions(object):

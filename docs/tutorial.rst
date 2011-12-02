@@ -48,15 +48,15 @@ Getting started
 ===============
 
 
-Add ``mptt`` To ``INSTALLED_APPS``
+Add ``mptt2`` To ``INSTALLED_APPS``
 ----------------------------------
 
-As with most Django applications, you should add ``mptt`` to the ``INSTALLED_APPS`` in your ``settings.py`` file::
+As with most Django applications, you should add ``mptt2`` to the ``INSTALLED_APPS`` in your ``settings.py`` file::
 
     INSTALLED_APPS = (
         'django.contrib.auth',
         # ...
-        'mptt',
+        'mptt2',
     )
 
 
@@ -66,7 +66,7 @@ Set up your model
 Start with a basic subclass of MPTTModel, something like this::
    
     from django.db import models
-    from mptt.models import MPTTModel, TreeForeignKey
+    from mptt2.models import MPTTModel, TreeForeignKey
     
     class Genre(MPTTModel):
         name = models.CharField(max_length=50, unique=True)

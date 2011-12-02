@@ -9,7 +9,7 @@ Working with trees in Django forms
 Fields
 ======
 
-The following custom form fields are provided in the ``mptt.forms``
+The following custom form fields are provided in the ``mptt2.forms``
 package.
 
 ``TreeNodeChoiceField``
@@ -82,7 +82,7 @@ for the `move_to method`_.
 Forms
 =====
 
-The following custom form is provided in the ``mptt.forms`` package.
+The following custom form is provided in the ``mptt2.forms`` package.
 
 ``MoveNodeForm``
 ----------------
@@ -149,7 +149,7 @@ the node movement as specified in the form.
 If an invalid move is attempted, an error message will be added to the
 form's non-field errors (accessible using
 ``{{ form.non_field_errors }}`` in templates) and the associated
-``mptt.exceptions.InvalidMove`` will be re-raised.
+``mptt2.exceptions.InvalidMove`` will be re-raised.
 
 It's recommended that you attempt to catch this error and, if caught,
 allow your view to to fall through to rendering the form again again, so
@@ -164,8 +164,8 @@ A sample view which shows basic usage of the form is provided below::
    from django.shortcuts import render_to_response
 
    from faqs.models import Category
-   from mptt.exceptions import InvalidMove
-   from mptt.forms import MoveNodeForm
+   from mptt2.exceptions import InvalidMove
+   from mptt2.forms import MoveNodeForm
 
    def move_category(request, category_pk):
        category = get_object_or_404(Category, pk=category_pk)

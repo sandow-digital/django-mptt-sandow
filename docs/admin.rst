@@ -16,7 +16,7 @@ in the tree to make a pretty tree list view.
 Usage::
 
     from django.contrib import admin
-    from mptt.admin import MPTTModelAdmin
+    from mptt2.admin import MPTTModelAdmin
     from myproject.myapp.models import Node
 
     admin.site.register(Node, MPTTModelAdmin)
@@ -31,7 +31,7 @@ If you'd like to specify the pixel amount per Model, define an ``mptt_level_inde
 attribute in your MPTTModelAdmin:: 
 
     from django.contrib import admin
-    from mptt.admin import MPTTModelAdmin
+    from mptt2.admin import MPTTModelAdmin
     from myproject.myapp.models import Node
 
     class CustomMPTTModelAdmin(MPTTModelAdmin)

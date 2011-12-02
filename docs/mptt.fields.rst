@@ -1,7 +1,7 @@
 ===============
-``mptt.fields``
+``mptt2.fields``
 ===============
     
-.. automodule:: mptt.fields
+.. automodule:: mptt2.fields
     :members:
     :undoc-members:

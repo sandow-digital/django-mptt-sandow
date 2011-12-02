@@ -2,7 +2,7 @@ import re
 
 from django.test import TestCase
 
-from mptt.exceptions import InvalidMove
+from mptt2.exceptions import InvalidMove
 from myapp.models import Category, Genre
 
 

@@ -1,18 +1,18 @@
 ========
-``mptt``
+``mptt2``
 ========
 
 ..  toctree::
     :maxdepth: 1
     
-    mptt.admin
-    mptt.exceptions
-    mptt.fields
-    mptt.forms
-    mptt.managers
-    mptt.models
-    mptt.utils
+    mptt2.admin
+    mptt2.exceptions
+    mptt2.fields
+    mptt2.forms
+    mptt2.managers
+    mptt2.models
+    mptt2.utils
 
-.. automodule:: mptt
+.. automodule:: mptt2
     :members:
     :undoc-members:

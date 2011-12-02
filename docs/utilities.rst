@@ -8,7 +8,7 @@ Utilities for working with trees
 List/tree utilities
 ===================
 
-The ``mptt.utils`` module contains the following functions for working
+The ``mptt2.utils`` module contains the following functions for working
 with and creating lists of model instances which represent trees.
 
 ``previous_current_next()``

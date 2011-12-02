@@ -1,7 +1,7 @@
 ===============
-``mptt.models``
+``mptt2.models``
 ===============
 
-.. automodule:: mptt.models
+.. automodule:: mptt2.models
     :members:
     :undoc-members:

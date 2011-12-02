@@ -1,5 +1,5 @@
 >>> from datetime import date
->>> from mptt.exceptions import InvalidMove
+>>> from mptt2.exceptions import InvalidMove
 >>> from myapp.models import Genre, Insert, MultiOrder, Node, OrderedInsertion, Tree, Person, Student
 
 >>> def print_tree_details(nodes):
@@ -35,7 +35,7 @@
 8 6 2 1 4 5
 
 # Utilities ###################################################################
->>> from mptt.utils import previous_current_next, tree_item_iterator, drilldown_tree_for_node
+>>> from mptt2.utils import previous_current_next, tree_item_iterator, drilldown_tree_for_node
 
 >>> for p,c,n in previous_current_next(Genre.objects.all()):
 ...     print (p,c,n)
@@ -83,7 +83,7 @@
 [u'Action', u'Platformer', u'3D Platformer']
 
 # Forms #######################################################################
->>> from mptt.forms import TreeNodeChoiceField, MoveNodeForm
+>>> from mptt2.forms import TreeNodeChoiceField, MoveNodeForm
 
 >>> f = TreeNodeChoiceField(queryset=Genre.objects.all())
 >>> print(f.widget.render("test", None))

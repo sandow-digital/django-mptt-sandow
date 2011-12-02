@@ -12,7 +12,7 @@ Setting up a Django model for MPTT
 Start with a basic subclass of MPTTModel, something like this::
    
     from django.db import models
-    from mptt.models import MPTTModel, TreeForeignKey
+    from mptt2.models import MPTTModel, TreeForeignKey
     
     class Genre(MPTTModel):
         name = models.CharField(max_length=50, unique=True)
@@ -104,16 +104,16 @@ However, sometimes that doesn't quite work. For instance, suppose you want to mo
 
 You can't subclass MPTTModel without modifying the Group source. Instead, you can do::
 
-    import mptt
-    from mptt.fields import TreeForeignKey
+    import mptt2
+    from mptt2.fields import TreeForeignKey
     from django.contrib.auth.models import Group
     
     # add a parent foreign key
     TreeForeignKey(Group, blank=True, null=True).contribute_to_class(Group, 'parent')
     
-    mptt.register(Group, order_insertion_by=['name'])
+    mptt2.register(Group, order_insertion_by=['name'])
 
-``mptt.register()`` was removed in 0.4.0 but restored in 0.4.2, when this use case was reported.
+``mptt2.register()`` was removed in 0.4.0 but restored in 0.4.2, when this use case was reported.
 
 
 MPTTModel instance methods
@@ -264,7 +264,7 @@ A ``ValueError`` will be raised if an invalid value is given for the
 Note that some of the moves you could attempt to make with this method
 are invalid - for example, trying to make an instance be its own
 child or the child of one of its descendants. In these cases, a
-``mptt.exceptions.InvalidMove`` exception will be raised.
+``mptt2.exceptions.InvalidMove`` exception will be raised.
 
 The instance itself will be also modified as a result of this call, to
 reflect the state of its updated tree fields in the database, so it's
@@ -277,7 +277,7 @@ method.
 
 .. versionadded:: 0.5
 
-It's recommended you use ``mptt.fields.TreeForeignKey`` wherever you have a
+It's recommended you use ``mptt2.fields.TreeForeignKey`` wherever you have a
 foreign key to an MPTT model. This includes the ``parent`` link you've just
 created on your model.
 

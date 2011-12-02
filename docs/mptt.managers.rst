@@ -1,7 +1,7 @@
 =================
-``mptt.managers``
+``mptt2.managers``
 =================
 
-.. automodule:: mptt.managers
+.. automodule:: mptt2.managers
     :members:
     :undoc-members:

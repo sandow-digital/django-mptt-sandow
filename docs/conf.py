@@ -49,7 +49,7 @@ copyright = u'2007 - 2011, Jonathan Buchanan and others'
 # built documents.
 #
 # The short X.Y version.
-version_tuple = __import__('mptt').VERSION
+version_tuple = __import__('mptt2').VERSION
 version = ".".join([str(v) for v in version_tuple])
 
 # The full version, including alpha/beta/rc tags.

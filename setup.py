@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from distutils.core import setup
 
-# Dynamically calculate the version based on mptt.VERSION
-version_tuple = __import__('mptt').VERSION
+# Dynamically calculate the version based on mptt2.VERSION
+version_tuple = __import__('mptt2').VERSION
 version = ".".join([str(v) for v in version_tuple])
 
 setup(
@@ -13,8 +13,8 @@ setup(
     author = 'Craig de Stigter',
     author_email = 'craig.ds@gmail.com',
     url = 'http://github.com/django-mptt/django-mptt',
-    packages=['mptt', 'mptt.templatetags'],
-    package_data={'mptt': ['templates/admin/*', 'locale/*/*/*.*']},
+    packages=['mptt2', 'mptt2.templatetags'],
+    package_data={'mptt2': ['templates/admin/*', 'locale/*/*/*.*']},
     classifiers = ['Development Status :: 4 - Beta',
                    'Environment :: Web Environment',
                    'Framework :: Django',

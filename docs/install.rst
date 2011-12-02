@@ -27,15 +27,15 @@ Alternatively, you can get the latest source from our `git`_ repository::
 
    git clone git://github.com/django-mptt/django-mptt.git django-mptt
 
-Add the resulting folder to your `PYTHONPATH`_ or symlink the ``mptt`` directory
-inside it into a directory which is on your PYTHONPATH, such as your Python 
-installation's ``site-packages`` directory.
+Add the resulting folder to your `PYTHONPATH`_ or symlink the ``mptt2``
+directory inside it into a directory which is on your PYTHONPATH, such as your
+Python installation's ``site-packages`` directory.
 
 You can verify that the application is available on your PYTHONPATH by
 opening a Python interpreter and entering the following commands::
 
-   >>> import mptt
-   >>> mptt.VERSION
+   >>> import mptt2
+   >>> mptt2.VERSION
    (0, 5, 2)
 
 When you want to update your copy of the source code, run ``git pull``

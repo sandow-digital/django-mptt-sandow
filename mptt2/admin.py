@@ -12,7 +12,7 @@ from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 from django.utils.encoding import force_unicode
 
-from mptt.forms import MPTTAdminForm, TreeNodeChoiceField
+from mptt2.forms import MPTTAdminForm, TreeNodeChoiceField
 
 __all__ = ('MPTTChangeList', 'MPTTModelAdmin', 'MPTTAdminForm')
 
@@ -42,7 +42,7 @@ class MPTTModelAdmin(ModelAdmin):
     form = MPTTAdminForm
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        from mptt.models import MPTTModel, TreeForeignKey
+        from mptt2.models import MPTTModel, TreeForeignKey
         if issubclass(db_field.rel.to, MPTTModel) and not isinstance(db_field, TreeForeignKey):
             defaults = dict(form_class=TreeNodeChoiceField, queryset=db_field.rel.to.objects.all(), required=False)
             defaults.update(kwargs)

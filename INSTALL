@@ -4,7 +4,7 @@ To install, run the following command inside this directory:
 
     python setup.py install
 
-Or if you'd prefer, you can simply place the included ``mptt`` directory
+Or if you'd prefer, you can simply place the included ``mptt2`` directory
 somewhere on your PYTHONPATH, or symlink to it from somewhere on your
 PYTHONPATH; this is useful if you're working from a git checkout.
 

@@ -85,7 +85,7 @@ of nodes which are retrieved for the whole tree or any subtree::
 Running the test suite
 ======================
 
-The ``mptt.tests`` package is set up as a project which holds a test
+The ``mptt2.tests`` package is set up as a project which holds a test
 settings module and defines models for use in testing MPTT. You can run
 the tests from the command-line using the ``manage.py`` script::
 

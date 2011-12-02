@@ -13,8 +13,8 @@ except ImportError:
     connections = None
     router = None
 
-from mptt.exceptions import InvalidMove
-from mptt.utils import _exists
+from mptt2.exceptions import InvalidMove
+from mptt2.utils import _exists
 
 __all__ = ('TreeManager',)
 

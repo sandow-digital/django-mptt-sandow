@@ -1,7 +1,7 @@
 ==============
-``mptt.admin``
+``mptt2.admin``
 ==============
 
-.. automodule:: mptt.admin
+.. automodule:: mptt2.admin
     :members:
     :undoc-members:
